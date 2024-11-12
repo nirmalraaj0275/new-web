@@ -9,6 +9,10 @@ const homeAuthors = async (req, res) => {
   }
 };
 
+const aboutUs = async(req,res)=>{
+  res.render("authors/aboutus",{ errorMessage: null })
+}
+
 const getAuthors = async (req, res) => {
   let searchOption = {};   
   if (req.query.name != null && req.query.name !== "") {
@@ -40,5 +44,6 @@ module.exports = {
   getAuthors,
   newAuthorForm,
   createAuthor,
+  aboutUs,
   homeAuthors
 };
