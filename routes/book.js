@@ -8,12 +8,11 @@ const {
 } = require("../controllers/bookControl.js");
 
 
-router.get("/", allBook); 
+router.get("/", allBook); // All Book Route
 
+router.get("/new", newBook); // New Book Route
 
-router.get("/new", newBook); // New BOOK
-
-router.post("/", createBook); // Create author route
+router.post("/", createBook); // Create Book Route
 
 
 module.exports = router;
