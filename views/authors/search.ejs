@@ -1,8 +1,8 @@
 <%- include('../partials/header') %> 
 <h2>SEARCH AUTHORS</h2>
-<form action="/authors" method="GET">
+<form action="/authors/search" method="GET">
   <label>Name</label>
-  <input type="text" name="name" value="<%= searchOption %>"> 
+  <input type="text" name="name" value="<%= searchOption %>">
   <button type="submit">Search</button>
 </form>
 <br>
@@ -17,6 +17,3 @@
     <p>No authors found.</p>
   <% } %>
 </ul>
-
-
-
