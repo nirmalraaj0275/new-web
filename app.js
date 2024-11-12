@@ -4,6 +4,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const expressLayouts = require("express-ejs-layouts");
 const authorRouter = require("./routes/authors.js");
+const bookRouter = require("./routes/book.js")
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -30,7 +31,9 @@ app.use(expressLayouts);
 app.set("view engine", "ejs");
 app.set("layout", "layouts/main");
 
+// app.use("/")
 app.use("/authors", authorRouter);
+app.use("/book", bookRouter)
 
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
