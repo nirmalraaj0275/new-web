@@ -1,8 +1,6 @@
 const Author = require("../models/authors.js");
 
 
-
-
 const  allBook = async (req, res) => {
     res.send("ALL BOOK")
  
