@@ -29,7 +29,9 @@ const createBook = async (req, res) => {
             title : req.body.title,
             description : req.body.description,
             publishdate : req.body.publishdate,
-            
+            pageCount : req.body.pageCount,
+            coverImage : req.body.coverImage,
+            author : req.body.author
         }) 
     } catch (error) {
         
