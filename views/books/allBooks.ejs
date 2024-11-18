@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+
+<h1>All Books</h1>
+<ul>
+    <% books.forEach(book => { %> <!-- Updated variable to 'book' -->
+        <li>
+            <h2><%= book.title %></h2>
+            <p><strong>Author:</strong> <%= book.author ? book.author.name : "Unknown" %></p>
+            <p><strong>Published:</strong> <%= book.publishedDate.toDateString() %></p>
+            <p><strong>Description:</strong> <%= book.description %></p>
+        </li>
+    <% }); %>
+</ul>
