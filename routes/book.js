@@ -12,7 +12,7 @@ router.get("/", allBook); // All Book Route
 
 router.get("/new", newBook); // New Book Route
 
-router.post("/", createBook); // Create Book Route
+router.post("/", upload.single("cover"), createBook); // Create Book Route
 
 
 module.exports = router;

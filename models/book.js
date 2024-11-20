@@ -1,4 +1,5 @@
 const mongoose = require("mongoose")
+const coverImagePath = "uploads/booksCover"
 
 const bookSchema = new mongoose.Schema({
     title :{ type:String, required: true}
@@ -17,3 +18,4 @@ const bookSchema = new mongoose.Schema({
 });
 
 module.exports = mongoose.model("book",bookSchema)
+module.exports.coverImagePath = coverImagePath
